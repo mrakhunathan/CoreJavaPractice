@@ -4,9 +4,7 @@ package com.javacore.practice.ExpectOutputs;
  * @author Rakhunathan.M
  *
  */
-public class Ababaababa {
-	// TODO:Write a program to obtain count no of occurrences of "aba" in
-	// "ababaababa"
+public class CheckStringRepetition {
 	public int getOccurances(String parentString, String subString) {
 		int count = 0;
 		int starter = 0;

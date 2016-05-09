@@ -11,15 +11,15 @@ import org.junit.Test;
  * @author Rakhunathan.M
  *
  */
-public class AbabaababaTest {
-	Ababaababa ababaababa;
+public class CheckStringRepetitionTest {
+	CheckStringRepetition ababaababa;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		ababaababa = new Ababaababa();
+		ababaababa = new CheckStringRepetition();
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class AbabaababaTest {
 
 	/**
 	 * Test method for
-	 * {@link com.javacore.practice.ExpectOutputs.Ababaababa#getOccurances(java.lang.String, java.lang.String)}
+	 * {@link com.javacore.practice.ExpectOutputs.CheckStringRepetition#getOccurances(java.lang.String, java.lang.String)}
 	 * .
 	 */
 	@Test

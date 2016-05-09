@@ -3,6 +3,8 @@
  */
 package com.javacore.practice.InterviewQuestions;
 
+import java.util.Random;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,12 +48,7 @@ public class CheckLinkedListCircularTest {
 		Node newNode = new Node("FirstNode");
 		thisList.setHead(newNode);
 		for (int i = 0; i < 10; i++) {
-			if (i == 5) {
-				Node thisNode = new Node("FirstNode");
-				newNode.setNext(thisNode);
-				newNode = newNode.next();
-			}
-			Node thisNode = new Node("" + i);
+			Node thisNode = new Node("" + new Random().nextInt(10));
 			newNode.setNext(thisNode);
 			newNode = newNode.next();
 		}
