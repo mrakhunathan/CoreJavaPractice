@@ -1,5 +1,9 @@
 package com.javacore.practice.InterviewQuestions;
 
+/**
+ * @author Rakhunathan.M
+ *
+ */
 import java.util.Stack;
 
 public class StackRev {

@@ -1,6 +1,9 @@
 package com.javacore.practice.InterviewQuestions;
 
-
+/**
+ * @author Rakhunathan.M
+ *
+ */
 public class StringImmutiblity {
 	public static void main(String[] args) {
 		String x = "one..";
