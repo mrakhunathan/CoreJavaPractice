@@ -54,7 +54,7 @@ public class LargestSumOfContiguousArrayTest {
 	public void splitSubSubArrayTest() {
 		int[] array = new int[100];
 		System.out.println("Elements In the Array");
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
 			array[i] = i;
 			System.out.print(array[i] + ",");
 		}

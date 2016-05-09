@@ -10,13 +10,13 @@ import java.util.TreeMap;
  *
  */
 public class LargestSumOfContiguousArray {
-	Map<Integer, Integer> subArrayCounts = new TreeMap<Integer, Integer>();
 
 	public void splitSubSubArray(int[] array, int subArrayCount) {
+		Map<Integer, Integer> subArrayCounts = new TreeMap<Integer, Integer>();
 		int startIndex = 0;
 		int arrayIndex = 0;
 		int[] tempArray = new int[subArrayCount];
-		for (int j = 0; j < array.length; j += subArrayCount) {
+		while (startIndex + subArrayCount < array.length) {
 			for (int i = startIndex; i < startIndex + subArrayCount; i++) {
 				tempArray[arrayIndex] = array[i];
 				arrayIndex++;
@@ -31,6 +31,7 @@ public class LargestSumOfContiguousArray {
 				startIndex = item.getKey();
 			}
 		}
+
 		System.out.print("Maximum Sum of SubArray[");
 		for (int i = startIndex; i < startIndex + subArrayCount; i++) {
 			tempArray[arrayIndex] = array[i];
@@ -40,30 +41,11 @@ public class LargestSumOfContiguousArray {
 		System.out.print("] is " + maxValue);
 	}
 
-	@SuppressWarnings("unused")
 	public int getSum(int[] array) {
-		int value = 0;
-		int bestSoFar = 0;
-		int bestNow = 0;
-		int bestStartIndexSoFar = -1;
-		int bestStopIndexSoFar = -1;
-		int bestStartIndexNow = -1;
+		int m = 0;
 		for (int i = 0; i < array.length; i++) {
-			value = bestNow + array[i];
-			if (value > 0) {
-				if (bestNow == 0) {
-					bestStartIndexNow = i;
-					bestNow = value;
-				} else {
-					bestNow = 0;
-				}
-			}
-			if (bestNow > bestSoFar) {
-				bestSoFar = bestNow;
-				bestStopIndexSoFar = i;
-				bestStartIndexSoFar = bestStartIndexNow;
-			}
+			m += array[i];
 		}
-		return value;
+		return m;
 	}
 }
